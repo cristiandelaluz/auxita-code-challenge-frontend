@@ -5,7 +5,7 @@ const AppFooter = (props) => {
   return(
     <footer className="footer">
       <div className="footer-content">
-        Made with <Heart className="text-secondary" /> by Cristian DE LA LUZ
+        Made with <Heart className="text-danger" /> by Cristian DE LA LUZ
       </div>
     </footer>
   );
