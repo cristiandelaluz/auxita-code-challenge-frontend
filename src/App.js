@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// Layout components
+// .- Navbar
+import AppFooter from './components/layouts/AppFooter';
+// .- Footer
+import AppNavbar from './components/layouts/AppNavbar';
+// Views
+//.- Hypertension calculator view
+import HypertensionCalculator from './views/HypertensionCalculator';
+//.- Kidney disease calculator view
+import KidneyDiseaseCalculator from './views/KidneyDiseaseCalculator';
+// React router
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <AppNavbar />
+
+        <Switch>
+          <Redirect exact from="/" to="/hypertension-calculator" />
+          <Route path="/hypertension-calculator">
+            <HypertensionCalculator />
+          </Route>
+          <Route path="/kidney-disease-calculator">
+            <KidneyDiseaseCalculator />
+          </Route>
+          <Route path="/">
+            <HypertensionCalculator />
+          </Route>
+        </Switch>
+
+        <AppFooter />
+      </Router>
     </div>
   );
 }

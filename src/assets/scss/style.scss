@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+@import './_variables.scss';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+/* Global */
+body {
+  font-family: 'Asap';
+  color: $dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Asap';
+  font-weight: 700;
+}
+
+label {
+  font-size: $small-font-size;
+}
+
+.m-navbar {
+  margin-top: 5rem !important;
+}
+
+.m-footer {
+  margin-bottom: 5rem !important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $dark;
+  color: $white;
+  .footer-content {
+    padding: 1rem;
+  }
+}
+
+/* Bootstrap */
+.btn {
+  padding: 0.375rem 1.5rem
+}
+
+.btn-outline-primary {
+  border: 2px solid $primary;
+}
+
+.btn-outline-secondary {
+  border: 2px solid $secondary;
+}
+
+.btn-outline-danger {
+  border: 2px solid $danger;
+}
+
+.card {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-gradient--top {
+  background-image: linear-gradient(to right, #c6beef, #cdc6f1, #d4cef3, #dbd6f5, #e2def7);
+  height: 1rem;
+  border-top-right-radius: $border-radius !important;
+  border-top-left-radius: $border-radius !important;
+}
+
+.modal-content {
+  border-radius: $border-radius-sm;
+  padding: 0.8rem;
+}
+
+.modal-header {
+  border-top-left-radius: $border-radius-sm;
+  border-top-right-radius: $border-radius-sm;
+  border-bottom: none;
+  padding: 0.8rem;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 0.8rem;
+}
+
+.alert {
+  border-radius: $border-radius-sm;
+}
+
+/* Datepicker custom style */
+.react-datepicker {
+  font-family: 'Asap' !important;
+  color: $dark;
+  border-radius: $border-radius-sm !important;
+  border: 1px solid $light !important;
+  box-shadow:  0 .5rem 1rem rgba($black, .15);
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
+  border-bottom-color: $light !important;
+}
+
+.react-datepicker-wrapper {
+  display: block !important;
+}
+
+.react-datepicker__header {
+  border-top-right-radius: $border-radius-sm !important;
+  border-top-left-radius: $border-radius-sm !important;
+  border-bottom: 1px solid $light !important;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+  background-color: $primary  !important;
+}
+
+.react-datepicker__today-button {
+  border-bottom-right-radius: $border-radius-sm !important;
+  border-bottom-left-radius: $border-radius-sm !important;
+  border-top: none !important;
+}
